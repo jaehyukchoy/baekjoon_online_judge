@@ -28,9 +28,6 @@ time = 0
 if l:
     x, c = l.popleft()
 while True:
-    for _ in range(len(board)):
-        print(board[_])
-    print('-----------------------------------------')
     time += 1
     movx, movy = mov[mov_idx]
     mov_his.append((movx,movy))
