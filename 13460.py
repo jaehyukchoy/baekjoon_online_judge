@@ -33,12 +33,10 @@ visited[rx][ry][bx][by] = True
 while q:
     rx, ry, bx, by, count = q.popleft()
     if count > 10:
-        print(-1)
-        exit()
+        break
     for i in range(4):
         rx_, ry_, rcnt = move(rx, ry, d[i][0], d[i][1])
         bx_, by_, bcnt = move(bx, by, d[i][0], d[i][1])
-        print(rx_,ry_,bx_,by_)
         if board[bx_][by_] == 'O':
             continue
         if board[rx_][ry_] == 'O':

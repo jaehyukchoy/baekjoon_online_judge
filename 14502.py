@@ -47,4 +47,3 @@ for wall in combinations(area, 3):
                 cnt += 1
     ans = max(ans,cnt)
 print(ans)
-

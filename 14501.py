@@ -14,4 +14,4 @@ for i in range(n-1,-1,-1):
         dp[i] = max(dp[i+t[i]] + p[i],dp[i+1])
     else:
         dp[i] = dp[i+1]
-print(dp)
+print(dp[0])
