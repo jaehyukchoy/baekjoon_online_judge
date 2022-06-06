@@ -1,4 +1,3 @@
-from re import L
 import sys
 input = sys.stdin.readline
 n,l=map(int,input().split())
