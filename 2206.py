@@ -1,6 +1,4 @@
-import sys
 from collections import deque
-from copy import deepcopy
 n,m=map(int,input().split())
 g=[list(map(int,list(input()))) for _ in range(n)]
 move=[(1,0),(-1,0),(0,1),(0,-1)]
