@@ -9,24 +9,30 @@ if n==k:
 else:
     flag=False
     while k<=500000:
-        time+=1
-        k+=time
-        if time%2==1:
+        if time%2==0:
             b=set()
             for z in a:
                 for zz in [z-1, z+1, z*2]:
-                    if k==zz:
-                        print(time)
-                        exit()
                     if 0<=zz<=500000:
-                        b.add(zz)
+                        b.add(zz)    
         else:
             a=set()
             for z in b:
                 for zz in [z-1, z+1, z*2]:
-                    if k==zz:
-                        print(time)
-                        exit()
-                    if 0<=zz<=500000:    
+                    if 0<=zz<=500000:
                         a.add(zz)    
-    print(-1)
+        time+=1
+        k+=time
+        if time%2==0:
+            if k in a:
+                flag=True
+                print(time)
+                break
+        else:
+            if k in b:
+                flag=True
+                print(time)
+                break
+            
+    if not flag:
+        print(-1)
