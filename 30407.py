@@ -1,4 +1,3 @@
-# 미채점 코드임.
 import sys
 input=sys.stdin.readline
 n=int(input())
