@@ -21,17 +21,18 @@ for _ in range(m):
     a,b=map(int,input().split())
     union(friend,a,b)   
 
+tmp=dict()
+for i in range(n):
+    root=find(friend,i+1)
+    if root in tmp:
+        tmp[root][0]+=c[i]
+        tmp[root][1]+=1
+    else:
+        tmp[root]=[c[i],1]
+
 steal=[]
-for i in range(1,n+1):
-    idx=[]
-    for j in range(1,n+1):
-        if friend[j]==i:
-            idx.append(j)
-    tmp=0
-    for fr in idx:
-        tmp+=c[fr-1]
-    if idx:
-        steal.append((tmp,len(idx)))
+for key,item in tmp.items():
+    steal.append(item)
 
 dp=[[0]*(k+1) for _ in range(len(steal)+1)]
 for i in range(1,len(steal)+1):
