@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(10**6)
 m, n = map(int, input().split())
 zido = [list(map(int, input().split())) for _ in range(m)]
 

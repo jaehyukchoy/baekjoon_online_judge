@@ -23,6 +23,7 @@ def prim(start):
         if not visited[current_vertex]:
             visited[current_vertex] = True
             total_weight += weight
+            edges_in_mst += 1
 
             for next_weight, next_vertex in g[current_vertex]:
                 if not visited[next_vertex]:
