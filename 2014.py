@@ -13,7 +13,7 @@ for _ in range(N):
     top = heapq.heappop(q)
     for p in primes:
         heapq.heappush(q, top*p)
-        # if top % p == 0:
-        #     break
+        if top % p == 0:
+            break
 
 print(top)
